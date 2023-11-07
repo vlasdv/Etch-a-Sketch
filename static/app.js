@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
   clearButton.addEventListener('click', () => {
     drawGrid(Number(gridInput.value));
   });  
+
+  addEventListener('resize', () => {
+    setSizes();
+  });
 });
 
 // set correct size for container and controls block
