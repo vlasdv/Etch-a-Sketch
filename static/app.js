@@ -8,6 +8,12 @@ function drawGrid() {
     for (let col = 0; col < gridSize; col++) {
       let newCol = document.createElement('div');
       newCol.className = 'cell';
+      newCol.addEventListener('mouseover', () => {
+        console.log(newCol.style.backgroundColor);
+        newCol.style.backgroundColor = getRandomColor();
+        // console.log(getRandomColor());
+        newCol.textContent = '1';
+      });
       newRow.appendChild(newCol);
     }
     container.appendChild(newRow);
@@ -15,7 +21,7 @@ function drawGrid() {
 }
 
 function getRandomColor() {
-  return Math.floor(Math.random()*16777215).toString(16);
+  return '#' + Math.floor(Math.random()*16777215).toString(16);
 }
 
 drawGrid();
