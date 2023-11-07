@@ -6,12 +6,30 @@ body {
   align-items: center;
   flex: 1;
   gap: 20px;
+
+  box-sizing: border-box;
 }
 
 .container {
   height: 80vw;
   width: 80vw;
-  background-color: aquamarine;  
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: stretch; */
+  /* align-items: stretch; */
+}
+
+.row {           
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  border: 1px solid;
+  margin: -0.5px;
+  flex: 1;
 }
 
 .buttons {
@@ -30,9 +48,4 @@ body {
 
 #grid-size {
   width: 60vw;
-}
-
-.input{
-  /* flex-basis: 80%; */
-  /* flex-shrink: 1;   */
 }
