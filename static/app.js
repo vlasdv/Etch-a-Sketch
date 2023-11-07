@@ -1,14 +1,35 @@
 const container = document.querySelector('.container');
 const gridLabel = document.querySelector('#grid-label');
 const gridInput = document.querySelector('#grid-size');
+const buttons = document.querySelector('.buttons');
+const clearButton = document.querySelector('#clear');
 
 document.addEventListener('DOMContentLoaded', () => {
+  setSizes();
   drawGrid(Number(gridInput.value));
+  
   gridInput.addEventListener('input', () => {
-    gridLabel.textContent = gridInput.value;
+    gridLabel.textContent = gridInput.value;    
     drawGrid(Number(gridInput.value));
   });
+  
+  clearButton.addEventListener('click', () => {
+    drawGrid(Number(gridInput.value));
+  });  
 });
+
+// set correct size for container and controls block
+function setSizes() {
+  if (window.innerWidth > window.innerHeight) {
+    container.style.height = '80vh';
+    container.style.width = '80vh';
+    buttons.style.width = '80vh';
+  } else {
+    container.style.height = '80vw';
+    container.style.width = '80vw';
+    buttons.style.width = '80vw';
+  }
+}
 
 function drawGrid(gridSize) {  
   container.replaceChildren();  

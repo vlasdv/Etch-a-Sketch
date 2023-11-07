@@ -33,9 +33,15 @@ body {
   width: 80vw;
   height: 30px;
   display: flex;      
-  gap: 20px;
-  justify-content: center;
+  flex-direction: row;
+  gap: 20px;  
+}
+
+.input {
+  display: flex;
   align-items: center;
+  flex: 1;
+  gap: 10px;
 }
 
 #clear {
@@ -43,5 +49,5 @@ body {
 }
 
 #grid-size {
-  width: 60vw;
+  flex: 1;  
 }
