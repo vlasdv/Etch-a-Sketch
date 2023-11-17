@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // set correct size for container and controls block
 function setSizes() {
   if (window.innerWidth > window.innerHeight) {
-    container.style.height = '80vh';
-    container.style.width = '80vh';
-    buttons.style.width = '80vh';
+    container.style.height = '80svh';
+    container.style.width = '80svh';
+    buttons.style.width = '80svh';
   } else {
-    container.style.height = '80vw';
-    container.style.width = '80vw';
-    buttons.style.width = '80vw';
+    container.style.height = '80svw';
+    container.style.width = '80svw';
+    buttons.style.width = '80svw';
   }
 }
 
